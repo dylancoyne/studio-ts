@@ -61,7 +61,7 @@ function Discover() {
           Kicking off a new project is as much about communicating with 
           the client and understanding their goals and product strategy, 
           as it is their customers needs. I am always keen to identify the 
-          opportunities for a client's new product. Every project is 
+          opportunities for a client&#39;s new product. Every project is 
           different but this can include organising a workshop, inviting 
           key business stakeholders, creating a UX canvas to outline the 
           project and creating a journey map to prioritise key 
@@ -124,7 +124,7 @@ function Deliver() {
         Then, I team up with others to build a product that solves real problems.
         </p>
         <p>
-        Even after the product is launched, my work isn’t done —  I often loop back 
+        Even after the product is launched, my work isn&#39;t done —  I often loop back 
         to earlier stages as new insights emerge, whether through testing or user feedback.
         </p>
         

@@ -160,7 +160,7 @@ export default function Contact() {
   return (
     <>
       <PageIntro eyebrow="CONTACT" title="Let's chat...">
-        <p>Id love to hear about your project, ideas, or anything else youd like to discuss.
+        <p>I&#39;d love to hear about your project, ideas, or anything else you&#39;d like to discuss.
           Feel free to get in touch and I will get back to you as soon as possible.
         </p>
       </PageIntro>

@@ -190,15 +190,15 @@ function Services() {
     
      
       <div className="mt-8 lg:w-1/3 lg:min-w-[33rem] lg:pl-4">
-          <FadeInStagger faster>
+          
         {faqs.map((faq, index) => (
-          <FadeIn>
+          
           <Accordion key={index} title={faq.title} id={`faqs-${index}`} active={faq.active}>
             {faq.text}
           </Accordion>
-          </FadeIn>
+          
         ))}
-        </FadeInStagger>
+        
       </div>
           
         </div>
