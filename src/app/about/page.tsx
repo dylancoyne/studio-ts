@@ -32,9 +32,9 @@ function Story() {
                   </span>
                   </h2>
                   <div className="mt-6 text-xl text-neutral-300">
-                    <p>I began my career straight out of university as a digital designer for a medical multi-media company, creating interfaces for CD-ROMs. Since then, I've seen the digital design field evolve dramatically!
+                    <p>I began my career straight out of university as a digital designer for a medical multi-media company, creating interfaces for CD-ROMs. Since then, I&#39;ve seen the digital design field evolve dramatically!
                     </p>
-                    <p className="mt-10">In recent years, I've had the privilege of working as a product designer with major brands like Penguin, Nissan, EDF, and Virgin, applying my expertise in UX/UI to deliver impactful, user-centered solutions.
+                    <p className="mt-10">In recent years, I&#39;ve had the privilege of working as a product designer with major brands like Penguin, Nissan, EDF, and Virgin, applying my expertise in UX/UI to deliver impactful, user-centered solutions.
                       </p>
                       </div>
                       </FadeIn>   
@@ -70,7 +70,7 @@ export default async function About() {
     <>
       <PageIntro eyebrow="ABOUT" title="My strength is in my collaboration">
         <p>
-        With over 18 years of experience in digital design, I've learned that effective 
+        With over 18 years of experience in digital design, I&#39;ve learned that effective 
         planning, strategic insight, and strong collaboration are critical to the success of any project.
         </p>
        <PdfViewer /> 
