@@ -136,10 +136,7 @@ export default async function Work() {
         title="Problem solving is at the heart of what I do"
       >
         <p>
-          A selection of some of my recent projects that educate, engage and inpsire audiences through natural interaction.
-        </p>
-        <p>
-          More case studies available on request.
+          A selection of some of my recent projects that educate, engage and inpsire audiences through natural interaction. More case studies available on request.
         </p>
       </PageIntro>
 
@@ -149,7 +146,7 @@ export default async function Work() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Mail Smirk', logo: logoVAAColor, author: 'Jamie Harrington - Senior Product Lead, Virgin Atlantic' }}
       >
-         I worked with Dylan across 2 years at Virgin Atlantic and his UX and design skills really helped delivery great features for us.
+         I worked with Dylan across 2 years at Virgin Atlantic and his UX and design skills really helped deliver great features for us.
       </Testimonial>
 
       <Clients />

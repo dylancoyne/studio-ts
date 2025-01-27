@@ -153,15 +153,14 @@ function ContactDetails() {
 
 // export const metadata: Metadata = {
 //   title: 'Contact Me',
-//   description: 'Let’s work together. We can’t wait to hear from you.',
+//    description: 'Let&#39;s work together. We can&#39;t wait to hear from you.',
 // }
 
 export default function Contact() {
   return (
     <>
       <PageIntro eyebrow="CONTACT" title="Let's chat...">
-        <p>I&#39;d love to hear about your project, ideas, or anything else you&#39;d like to discuss.
-          Feel free to get in touch and I will get back to you as soon as possible.
+        <p className="max-w-2xl">I&#39;d love to hear about your project, ideas, or anything else you&#39;d like to discuss. Feel free to get in touch and I will get back to you as soon as possible.
         </p>
       </PageIntro>
 

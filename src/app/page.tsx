@@ -49,7 +49,7 @@ const clients = [
 const faqs = [
   {
     title: "UX discovery and research",
-    text: "Extensive research, in-depth analysis, and the careful planning ensures a relevant experience to users across touchpoints.",
+    text: "Extensive research, in-depth analysis, and careful planning ensures a relevant experience to users across touchpoints.",
     active: false,
   },
   {
@@ -177,7 +177,7 @@ function Services() {
           <span className="block font-display tracking-wide [text-wrap:balance] text-4xl font-bold sm:text-5xl text-neutral-950">Helping you to identify, explore and respond to new opportunities.</span>
         
           <p className='mt-6 text-xl text-neutral-950 lg:pr-4'>
-          Over the last 18+ years, I have forged a reputation for creating highly effective, digital solutions for top UK brands.
+          Over the last 18+ years, I have forged a reputation for creating highly effective digital solutions for top UK brands.
           </p>
         <div className="mt-6 text-xl">
           <a href="/process" className="inline-flex items-center font-medium text-primary transition hover:text-secondary">How I work
