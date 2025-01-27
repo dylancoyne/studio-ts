@@ -180,7 +180,7 @@ function Services() {
           Over the last 18+ years, I have forged a reputation for creating highly effective, digital solutions for top UK brands.
           </p>
         <div className="mt-6 text-xl">
-          <a href="/next-app/process" className="inline-flex items-center font-medium text-primary transition hover:text-secondary">How I work
+          <a href="/process" className="inline-flex items-center font-medium text-primary transition hover:text-secondary">How I work
             <svg className="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
             </svg>
