@@ -35,8 +35,8 @@ export default function Accordion({
         >
           <span>{title}</span>
           <svg className="fill-primary shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-            <rect stroke="#22A355" stroke-width="1" y="7" width="16" height="2" rx="3" className={`transform origin-center transition duration-200 ease-out ${accordionOpen && '!rotate-180'}`} />
-            <rect stroke="#22A355" stroke-width="1" y="7" width="16" height="2" rx="3" className={`fill-tertiary transform origin-center rotate-90 transition duration-200 ease-out ${accordionOpen && '!rotate-180'}`} />
+            <rect stroke="#22A355" strokeWidth="1" y="7" width="16" height="2" rx="3" className={`transform origin-center transition duration-200 ease-out ${accordionOpen && '!rotate-180'}`} />
+            <rect stroke="#22A355" strokeWidth="1" y="7" width="16" height="2" rx="3" className={`fill-tertiary transform origin-center rotate-90 transition duration-200 ease-out ${accordionOpen && '!rotate-180'}`} />
           </svg>
         </button>
       </h6>

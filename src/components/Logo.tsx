@@ -17,7 +17,7 @@ export function Logomark({
     <svg
     viewBox="0 0 256 96"
     stroke="#191818" 
-    stroke-width="0.5" 
+    strokeWidth="0.5" 
     preserveAspectRatio="xMinYMid meet"
     aria-hidden="true" {...props}
     className={clsx(
@@ -49,7 +49,7 @@ export function Logo({
     <svg
     viewBox="0 0 256 96" 
     stroke="#20789D" 
-    stroke-width="0.5"
+    strokeWidth="0.5"
     fill="none"
     className={clsx(
       'transition-all duration-300',
