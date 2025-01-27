@@ -136,7 +136,7 @@ export default async function Work() {
         title="Problem solving is at the heart of what I do"
       >
         <p>
-          A selection of some of my recent projects that educate, engage and inpsire audiences through natural interaction. More case studies available on request.
+          A selection of some of my recent projects that educate, engage and inpsire audiences through natural interaction. More case studies coming soon.
         </p>
       </PageIntro>
 

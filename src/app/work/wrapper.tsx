@@ -60,7 +60,7 @@ export default async function CaseStudyLayout({
                 <GrayscaleTransitionImage
                   {...caseStudy.image}
                   quality={90}
-                  className="w-full rounded-none xl:rounded-[88px]"
+                  className="w-full rounded-none xl:rounded-[88px] xl:py-12 xl:px-12"
                   sizes="(min-width: 1216px) 76rem, 100vw"
                   priority
                 />
