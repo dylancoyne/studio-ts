@@ -4,22 +4,24 @@ import Link from 'next/link'
 
 import { Blockquote } from '@/components/Blockquote'
 import { Border } from '@/components/Border'
-import { Button } from '@/components/Button'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-dark.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-dark.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-dark.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-dark.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-dark.svg'
-import logoPhobia from '@/images/clients/phobia/logo-dark.svg'
-import logoUnseal from '@/images/clients/unseal/logo-dark.svg'
+import logoVAADark from '@/images/clients/vaa/logo-dark.svg'
+import logoVAAColor from '@/images/clients/vaa/logo-color.svg'
+import logoSageDark from '@/images/clients/sage/logo-dark.svg'
+import logoPenguinDark from '@/images/clients/penguin/logo-dark.svg'
+import logoClearleftDark from '@/images/clients/clear-left/logo-dark.svg'
+import logoJaguarDark from '@/images/clients/jaguar/logo-dark.svg'
+import logoNissanDark from '@/images/clients/nissan/logo-dark.svg'
+import logoEdfDark from '@/images/clients/edf/logo-dark.svg'
+import logoVholsDark from '@/images/clients/vhols/logo-dark.svg'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+import { TagList, TagListItem } from '@/components/TagList'
+
 
 function CaseStudies({
   caseStudies,
@@ -28,64 +30,45 @@ function CaseStudies({
 }) {
   return (
     <Container className="mt-40">
-      <FadeIn>
-        <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          Case studies
-        </h2>
-      </FadeIn>
+      
       <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
         {caseStudies.map((caseStudy) => (
           <FadeIn key={caseStudy.client}>
             <article>
               <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
-                <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
-                  <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
+                  <div className="col-span-full sm:col-span-full lg:col-span-1 w-full">
                     <Image
                       src={caseStudy.logo}
-                      alt=""
-                      className="h-16 w-16 flex-none"
+                      alt={caseStudy.title}
+                      className="w-full h-auto rounded-3xl"
                       unoptimized
                     />
-                    <h3 className="mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
-                      {caseStudy.client}
-                    </h3>
                   </div>
-                  <div className="mt-1 flex gap-x-4 sm:mt-0 lg:block">
-                    <p className="text-sm tracking-tight text-neutral-950 after:ml-4 after:font-semibold after:text-neutral-300 after:content-['/'] lg:mt-2 lg:after:hidden">
-                      {caseStudy.service}
-                    </p>
-                    <p className="text-sm text-neutral-950 lg:mt-2">
-                      <time dateTime={caseStudy.date}>
-                        {formatDate(caseStudy.date)}
-                      </time>
-                    </p>
-                  </div>
-                </div>
                 <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
-                  <p className="font-display text-4xl font-medium text-neutral-950">
-                    <Link href={caseStudy.href}>{caseStudy.title}</Link>
-                  </p>
-                  <div className="mt-6 space-y-6 text-base text-neutral-600">
-                    {caseStudy.summary.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </div>
-                  <div className="mt-8 flex">
-                    <Button
-                      href={caseStudy.href}
-                      aria-label={`Read case study: ${caseStudy.client}`}
-                    >
-                      Read case study
-                    </Button>
-                  </div>
-                  {caseStudy.testimonial && (
-                    <Blockquote
-                      author={caseStudy.testimonial.author}
-                      className="mt-12"
-                    >
-                      {caseStudy.testimonial.content}
-                    </Blockquote>
-                  )}
+                  <h3 className="mt-6 flex gap-x-2 text-neutral-800 text-lg">
+                        {caseStudy.client}
+                      </h3>
+                    <p className="mt-2 font-display text-4xl font-bold text-neutral-950">
+                      <Link href={caseStudy.href}>{caseStudy.title}</Link>
+                    </p>
+                    <div className="mt-6 space-y-6 text-base text-neutral-950">
+                    
+                      {caseStudy.summary.map((paragraph) => (
+                        <p key={paragraph}>{paragraph}</p>
+                      ))}
+                    </div>
+                    <div className="mt-12 inline-block">
+                      <p className="text-xs text-primary">
+                      <time dateTime={caseStudy.date}>
+                            {formatDate(caseStudy.date)}
+                          </time>
+                          </p>
+                      <Link className="inline-flex items-center font-medium text-xl text-primary transition hover:text-secondary" href={caseStudy.href}aria-label={`Read case study: ${caseStudy.client}`}>Read case study
+                      <svg className="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                      </svg></Link>
+                    
+                    </div>
                 </div>
               </Border>
             </article>
@@ -97,36 +80,36 @@ function CaseStudies({
 }
 
 const clients = [
-  ['Phobia', logoPhobia],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  ['Vaa', logoVAADark],
+  ['Sage', logoSageDark],
+  ['Penguin', logoPenguinDark],
+  ['Clear Left', logoClearleftDark],
+  ['Jaguar', logoJaguarDark],
+  ['Nissan', logoNissanDark],
+  ['EDF', logoEdfDark],
+  ['Vhols', logoVholsDark],
 ]
 
 function Clients() {
   return (
+    
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <FadeIn>
-        <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          You’re in good company
-        </h2>
+      <h2 className="font-display text-base font-bold tracking-normal text-neutral-950">
+            CLIENTS
+          </h2>
       </FadeIn>
       <FadeInStagger className="mt-10" faster>
-        <Border as={FadeIn} />
         <ul
           role="list"
           className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4"
         >
           {clients.map(([client, logo]) => (
-            <li key={client} className="group">
+            <li key={client} className="flex justify-center items-center">
               <FadeIn className="overflow-hidden">
-                <Border className="pt-12 group-[&:nth-child(-n+2)]:-mt-px sm:group-[&:nth-child(3)]:-mt-px lg:group-[&:nth-child(4)]:-mt-px">
-                  <Image src={logo} alt={client} unoptimized />
-                </Border>
+                
+                  <Image src={logo} alt={client} unoptimized className="w-full h-full object-contain" />
+                
               </FadeIn>
             </li>
           ))}
@@ -137,24 +120,26 @@ function Clients() {
 }
 
 export const metadata: Metadata = {
-  title: 'Our Work',
+  title: 'Work',
   description:
     'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
 }
 
 export default async function Work() {
-  let caseStudies = await loadCaseStudies()
+  // change (0, 1) to display number of case studies
+  let caseStudies = (await loadCaseStudies()).slice(0, 1)
 
   return (
     <>
       <PageIntro
-        eyebrow="Our work"
-        title="Proven solutions for real-world problems."
+        eyebrow="PROJECTS"
+        title="Problem solving is at the heart of what I do"
       >
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          A selection of some of my recent projects that educate, engage and inpsire audiences through natural interaction.
+        </p>
+        <p>
+          More case studies available on request.
         </p>
       </PageIntro>
 
@@ -162,10 +147,9 @@ export default async function Work() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
+        client={{ name: 'Mail Smirk', logo: logoVAAColor, author: 'Jamie Harrington - Senior Product Lead, Virgin Atlantic' }}
       >
-        We approached <em>Studio</em> because we loved their past work. They
-        delivered something remarkably similar in record time.
+         I worked with Dylan across 2 years at Virgin Atlantic and his UX and design skills really helped delivery great features for us.
       </Testimonial>
 
       <Clients />

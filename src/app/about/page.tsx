@@ -1,5 +1,6 @@
 import { type Metadata } from 'next'
 import Image from 'next/image'
+import React from 'react';
 
 import { Border } from '@/components/Border'
 import { ContactSection } from '@/components/ContactSection'
@@ -9,179 +10,57 @@ import { GridList, GridListItem } from '@/components/GridList'
 import { PageIntro } from '@/components/PageIntro'
 import { PageLinks } from '@/components/PageLinks'
 import { SectionIntro } from '@/components/SectionIntro'
-import { StatList, StatListItem } from '@/components/StatList'
-import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
-import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
-import imageBlakeReid from '@/images/team/blake-reid.jpg'
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
-import imageDriesVincent from '@/images/team/dries-vincent.jpg'
-import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
-import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpg'
-import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg'
-import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg'
-import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
-import imageMichaelFoster from '@/images/team/michael-foster.jpg'
-import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
 import { loadArticles } from '@/lib/mdx'
+import { TagList, TagListItem } from '@/components/TagList'
+import imageBio from '@/images/dylan-coyne.jpg'
+import imageTesting from '@/images/user-testing.jpg'
+import { StylizedImage } from '@/components/StylizedImage'
+import PdfViewer from '@/components/PdfViewer'
 
-function Culture() {
+
+
+function Story() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
-      <SectionIntro
-        eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
-        invert
-      >
-        <p>
-          We are a group of like-minded people who share the same core values.
-        </p>
-      </SectionIntro>
-      <Container className="mt-16">
-        <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
-          </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
-          </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
-          </GridListItem>
-        </GridList>
-      </Container>
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 lg:flex lg:items-start lg:justify-end gap-16">
+        <div className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem]">
+        <FadeInStagger>
+        <FadeIn>
+              <h2>
+                <span className="mb-6 block font-display text-base font-bold tracking-normal text-white">MY STORY</span>
+                <span className="block font-display tracking-wide [text-wrap:balance] text-4xl font-medium sm:text-5xl text-white">Passionate about creating impactful digital experiences
+                  </span>
+                  </h2>
+                  <div className="mt-6 text-xl text-neutral-300">
+                    <p>I began my career straight out of university as a digital designer for a medical multi-company, creating interfaces for CD-ROMs. Since then, I’ve seen the digital design field evolve dramatically!
+                    </p>
+                    <p className="mt-10">In recent years, I’ve had the privilege of working as a product designer with major brands like Penguin, Nissan, EDF, and Virgin, applying my expertise in UX/UI to deliver impactful, user-centered solutions.
+                      </p>
+                      </div>
+                      </FadeIn>   
+                      </FadeInStagger> 
+        </div>
+        
+        <div className="flex justify-center lg:w-1/2 lg:justify-start lg:pr-12">
+            <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
+              <StylizedImage
+                src={imageTesting}
+                sizes="(min-width: 1024px) 41rem, 31rem"
+                className="justify-center lg:justify-end"
+              />
+            </FadeIn>
+          </div>
+                
+          </div>
+      
     </div>
   )
 }
 
-const team = [
-  {
-    title: 'Leadership',
-    people: [
-      {
-        name: 'Leslie Alexander',
-        role: 'Co-Founder / CEO',
-        image: { src: imageLeslieAlexander },
-      },
-      {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
-        image: { src: imageMichaelFoster },
-      },
-      {
-        name: 'Dries Vincent',
-        role: 'Partner & Business Relations',
-        image: { src: imageDriesVincent },
-      },
-    ],
-  },
-  {
-    title: 'Team',
-    people: [
-      {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
-        image: { src: imageChelseaHagon },
-      },
-      {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
-        image: { src: imageEmmaDorsey },
-      },
-      {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
-      },
-      {
-        name: 'Blake Reid',
-        role: 'Junior Copywriter',
-        image: { src: imageBlakeReid },
-      },
-      {
-        name: 'Kathryn Murphy',
-        role: 'VP, Human Resources',
-        image: { src: imageKathrynMurphy },
-      },
-      {
-        name: 'Whitney Francis',
-        role: 'Content Specialist',
-        image: { src: imageWhitneyFrancis },
-      },
-      {
-        name: 'Jeffrey Webb',
-        role: 'Account Coordinator',
-        image: { src: imageJeffreyWebb },
-      },
-      {
-        name: 'Benjamin Russel',
-        role: 'Senior Developer',
-        image: { src: imageBenjaminRussel },
-      },
-      {
-        name: 'Angela Fisher',
-        role: 'Front-end Developer',
-        image: { src: imageAngelaFisher },
-      },
-    ],
-  },
-]
-
-function Team() {
-  return (
-    <Container className="mt-24 sm:mt-32 lg:mt-40">
-      <div className="space-y-24">
-        {team.map((group) => (
-          <FadeInStagger key={group.title}>
-            <Border as={FadeIn} />
-            <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
-              <FadeIn>
-                <h2 className="font-display text-2xl font-semibold text-neutral-950">
-                  {group.title}
-                </h2>
-              </FadeIn>
-              <div className="lg:col-span-3">
-                <ul
-                  role="list"
-                  className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8"
-                >
-                  {group.people.map((person) => (
-                    <li key={person.name}>
-                      <FadeIn>
-                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
-                          <Image
-                            alt=""
-                            {...person.image}
-                            className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
-                            <p className="font-display text-base/6 font-semibold tracking-wide text-white">
-                              {person.name}
-                            </p>
-                            <p className="mt-2 text-sm text-white">
-                              {person.role}
-                            </p>
-                          </div>
-                        </div>
-                      </FadeIn>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </FadeInStagger>
-        ))}
-      </div>
-    </Container>
-  )
-}
-
 export const metadata: Metadata = {
-  title: 'About Us',
+  title: 'About',
   description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+    'Explore our comprehensive digital services tailored to enhance your online presence. From web design and development to eCommerce and UX/UI design.',
 }
 
 export default async function About() {
@@ -189,44 +68,73 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro eyebrow="ABOUT" title="My strength is in my collaboration">
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+        With over 18 years of experience in digital design, I’ve learned that effective 
+        planning, strategic insight, and strong collaboration are critical to the success of any project.
         </p>
-        <div className="mt-10 max-w-2xl space-y-6 text-base">
-          <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
-          </p>
-          <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
-          </p>
-        </div>
+       <PdfViewer /> 
       </PageIntro>
-      <Container className="mt-16">
-        <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
-        </StatList>
+      <Story />
+      <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <div className="[&>*]:mx-auto [&>*]:max-w-3xl [&>:first-child]:!mt-0 [&>:last-child]:!mb-0">
+        <div className="typography">
+        <h2>Key Skills</h2>
+          <p className="max-w-5xl text-xl">
+            My passion for digital design is helped by a rather large chunk of 
+            skills in Figma, Figjam, Miro, Mural, Sketch, Adobe Creative Suite,
+            HTML, HTML5, CSS. 
+          </p>
+          <p>The services I can provide include:</p>
+        </div>
+        <TagList
+         className="max-w-5xl"
+        >
+            <TagListItem>UX discovery</TagListItem>
+            <TagListItem>UX research</TagListItem>
+            <TagListItem>Content architecture</TagListItem>
+            <TagListItem>Wireframes & Prototyping</TagListItem>
+            <TagListItem>User testing</TagListItem>
+            <TagListItem>Creative concepting</TagListItem>
+            <TagListItem>Visual design & UI</TagListItem>
+            <TagListItem>Data analysis & optimisation</TagListItem>
+            <TagListItem>Design system</TagListItem>
+            <TagListItem>Digital strategy</TagListItem>
+          </TagList>
+          
+        <div className="my-24 mx-auto max-w-7xl !max-w-none lg:flex lg:items-center lg:justify-center gap-16">
+          <div className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem]">
+                <FadeIn className="w-full flex-none grayscale">
+                  <Image className="rounded-3xl"
+                          src={imageBio}
+                          alt={"Dylan Coyne"}
+                          unoptimized
+                        />
+                </FadeIn>
+          </div>
+          
+            <FadeInStagger>
+              <FadeIn>
+                <div className="mt-6 text-xl py-24">
+                  <p>I have always enjoyed using my imagination to be as creative 
+                    as I can be to solve problems and find solutions. Be it a tricky 
+                    UX customer journey or a complicated UI layout, I approach 
+                    challenges with determination, persistence and critical thinking.
+                  </p>
+                  <PdfViewer /> 
+                </div>
+              </FadeIn>   
+            </FadeInStagger> 
+          </div>     
+       </div>
       </Container>
 
-      <Culture />
-
-      <Team />
-
-      <PageLinks
+      {/* <PageLinks
         className="mt-24 sm:mt-32 lg:mt-40"
-        title="From the blog"
-        intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
+        title="Some design thinking"
+        intro="Over the years I have been lucky to work on varied and exciting digital design projects."
         pages={blogArticles}
-      />
+      /> */}
 
       <ContactSection />
     </>

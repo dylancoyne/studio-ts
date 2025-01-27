@@ -44,7 +44,7 @@ function BlockquoteWithImage({
   )
 }
 
-function BlockquoteWithoutImage({
+function BlockquoteWithoutImageAuthor({
   author,
   children,
   className,
@@ -56,27 +56,57 @@ function BlockquoteWithoutImage({
   return (
     <Border position="left" className={clsx('pl-8', className)}>
       <figure className="text-sm">
-        <blockquote className="text-neutral-600 [&>*]:relative [&>:first-child]:before:absolute [&>:first-child]:before:right-full [&>:first-child]:before:content-['“'] [&>:last-child]:after:content-['”']">
+        <blockquote className="relative font-display text-3xl md:text-4xl font-semibold tracking-wider text-neutral-950">
           {typeof children === 'string' ? <p>{children}</p> : children}
         </blockquote>
-        <figcaption className="mt-6 font-semibold text-neutral-950">
-          {author.name}, {author.role}
-        </figcaption>
+        
+        
       </figure>
     </Border>
   )
 }
 
+function BlockquoteWithAuthor({
+  author,
+  children,
+  className,
+}: {
+  author: { name: string; role: string }
+  children: React.ReactNode
+  className?: string
+}) {
+  return (
+    <Border position="left" className={clsx('pl-8', className)}>
+      <figure className="text-sm">
+        <blockquote className="relative font-display text-3xl md:text-4xl font-semibold tracking-wider text-neutral-950">
+          {typeof children === 'string' ? <p>{children}</p> : children}
+        </blockquote>
+        {
+          <figcaption className="mt-6 font-semibold text-neutral-950">
+          {author.name}, {author.role}
+        </figcaption>
+        }
+      </figure>
+    </Border>
+  )
+}
+
+
+
+
 export function Blockquote(
   props:
     | React.ComponentPropsWithoutRef<typeof BlockquoteWithImage>
-    | (React.ComponentPropsWithoutRef<typeof BlockquoteWithoutImage> & {
+    | (React.ComponentPropsWithoutRef<typeof BlockquoteWithoutImageAuthor> & {
         image?: undefined
+        author?: undefined
       }),
 ) {
   if (props.image) {
     return <BlockquoteWithImage {...props} />
   }
-
-  return <BlockquoteWithoutImage {...props} />
+  if (props.author) {
+    return <BlockquoteWithAuthor {...props} />
+  }
+  return <BlockquoteWithoutImageAuthor {...props} />
 }

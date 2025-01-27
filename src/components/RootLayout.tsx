@@ -16,7 +16,7 @@ import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
-import { GridPattern } from '@/components/GridPattern'
+//import { GridPattern } from '@/components/GridPattern'
 import { Logo, Logomark } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
@@ -74,15 +74,11 @@ function Header({
             invert={invert}
             filled={logoHovered}
           />
-          <Logo
-            className="hidden h-8 sm:block"
-            invert={invert}
-            filled={logoHovered}
-          />
+         
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href="/contact" invert={invert}>
-            Contact us
+          <Button href="/work" invert={invert}>
+            Projects
           </Button>
           <button
             ref={toggleRef}
@@ -91,7 +87,7 @@ function Header({
             aria-expanded={expanded ? 'true' : 'false'}
             aria-controls={panelId}
             className={clsx(
-              'group -m-2.5 rounded-full p-2.5 transition',
+              'group -m-2.5 rounded-full p-3.5 transition',
               invert ? 'hover:bg-white/10' : 'hover:bg-neutral-950/10',
             )}
             aria-label="Toggle navigation"
@@ -131,7 +127,7 @@ function NavigationItem({
   return (
     <Link
       href={href}
-      className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
+      className="group relative isolate -mx-6 hover:text-lightblue bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
     >
       {children}
       <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
@@ -141,14 +137,14 @@ function NavigationItem({
 
 function Navigation() {
   return (
-    <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
+    <nav className="mt-px font-display text-5xl font-semibold tracking-wide text-white">
       <NavigationRow>
-        <NavigationItem href="/work">Our Work</NavigationItem>
-        <NavigationItem href="/about">About Us</NavigationItem>
+        <NavigationItem href="/">Home</NavigationItem>
+        <NavigationItem href="/about">About</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/process">Our Process</NavigationItem>
-        <NavigationItem href="/blog">Blog</NavigationItem>
+        <NavigationItem href="/process">Process</NavigationItem>
+        <NavigationItem href="/contact">Contact</NavigationItem>
       </NavigationRow>
     </nav>
   )
@@ -232,17 +228,17 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
               <Container>
                 <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
                   <div>
-                    <h2 className="font-display text-base font-semibold text-white">
-                      Our offices
-                    </h2>
+                    {<h2 className="font-display text-base font-semibold text-white">
+                     Profile
+                    </h2>}
                     <Offices
                       invert
-                      className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
+                      className="mt-0 grid grid-cols-1 gap-8 sm:grid-cols-2"
                     />
                   </div>
                   <div className="sm:border-l sm:border-transparent sm:pl-16">
                     <h2 className="font-display text-base font-semibold text-white">
-                      Follow us
+                      Follow me
                     </h2>
                     <SocialMedia className="mt-6" invert />
                   </div>
@@ -261,13 +257,8 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
         <motion.div
           layout
           className="relative isolate flex w-full flex-col pt-9"
+          //removed grid pattern function below
         >
-          <GridPattern
-            className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
-            yOffset={-96}
-            interactive
-          />
-
           <main className="w-full flex-auto">{children}</main>
 
           <Footer />

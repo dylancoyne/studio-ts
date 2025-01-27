@@ -26,6 +26,7 @@ export function GrayscaleTransitionImage(
   let filter = useMotionTemplate`grayscale(${grayscale})`
 
   return (
+    //remove opacity by removing outer div
     <div ref={ref} className="group relative">
       <MotionImage alt="" style={{ filter } as any} {...props} />
       <div
