@@ -115,7 +115,7 @@ function CaseStudies({
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-        A selection of some of my recent projects that educate, engage and inpsire audiences through natural interaction
+        A selection of some of my recent projects that educate, engage and inspire audiences through natural interaction
         </p>
         <div className="mt-6">
           <a href="/next-app/work" className="inline-flex items-center font-medium text-primary transition hover:text-secondary">View all projects
