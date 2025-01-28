@@ -147,7 +147,7 @@ function CaseStudies({
                 <p className="mt-6 font-display tracking-wide text-3xl font-bold text-neutral-950">
                   {caseStudy.title}
                 </p>
-                <div className="mt-6 font-display text-2xl font-semibold text-neutral-950">
+                <div className="mt-6 font-display text-2xl">
                 <TagList className="mt-4">
                   <TagListItem>{caseStudy.service}</TagListItem>
                 </TagList>
