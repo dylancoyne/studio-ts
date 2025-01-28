@@ -92,7 +92,8 @@ export default async function About() {
         >
             <TagListItem>UX discovery</TagListItem>
             <TagListItem>UX research</TagListItem>
-            <TagListItem>Content architecture</TagListItem>
+            <TagListItem>Content design</TagListItem>
+            <TagListItem>Interaction design</TagListItem>
             <TagListItem>Wireframes & Prototyping</TagListItem>
             <TagListItem>User testing</TagListItem>
             <TagListItem>Creative concepting</TagListItem>
