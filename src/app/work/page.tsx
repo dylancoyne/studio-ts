@@ -133,7 +133,7 @@ export default async function Work() {
     <>
       <PageIntro
         eyebrow="PROJECTS"
-        title="Problem solving is at the heart of what I do"
+        title='Problem solving is at the heart of what I do'
       >
         <p>
           A selection of some of my recent projects that educate, engage and inspire audiences through natural interaction. More case studies coming soon.

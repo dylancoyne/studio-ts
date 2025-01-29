@@ -14,6 +14,7 @@ export function PageIntro({
   children: React.ReactNode
   centered?: boolean
 }) {
+
   return (
     <Container
       className={clsx('mt-24 sm:mt-32 lg:mt-40', centered && 'text-left lg:max-w-3xl')}
@@ -26,7 +27,7 @@ export function PageIntro({
           <span className="sr-only"> - </span>
           <span
             className={clsx(
-              'mt-6 block max-w-5xl font-display text-5xl font-bold tracking-wide text-neutral-950 [text-wrap:balance] sm:text-6xl',
+              'mt-6 block max-w-4xl font-display text-5xl font-bold tracking-wide text-neutral-950 [text-wrap:balance] sm:text-6xl',
               centered && 'mx-auto',
             )}
           >
