@@ -214,7 +214,7 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   // Change (0,1) to display (0,3)
-  let caseStudies = (await loadCaseStudies()).slice(0, 1)
+  let caseStudies = (await loadCaseStudies()).slice(0, 2)
 
   return (
     <>
