@@ -24,7 +24,7 @@ const navigation = [
     title: 'Projects',
     links: [
       { title: 'Virgin Atlantic', href: '/work/virgin-atlantic' },
-      // { title: 'Sage', href: '/work/sage' },
+      { title: 'Sage', href: '/work/sage' },
       // { title: 'Nissan', href: '/work/nissan' },
       {
         title: (
