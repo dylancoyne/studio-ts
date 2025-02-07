@@ -225,7 +225,7 @@ export default async function Home() {
             Designing digital experiences with lasting impact
           </h1>
           <p className="mt-6 text-xl text-neutral-950">
-              I create strategically led, user centered experiences that drive brand alignment and innovation, transforming business needs and customer insights into engaging UI solutions.          </p>
+              I create strategically led, user centred experiences that drive brand alignment and innovation, transforming business needs and customer insights into engaging UI solutions.          </p>
           </div>
           <div className="flex justify-center lg:w-1/2 lg:justify-start">
             <FadeIn className="w-[33.75rem] flex-none xl:w-[51rem]">
