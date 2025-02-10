@@ -209,7 +209,7 @@ function Services() {
 
 export const metadata: Metadata = {
   description:
-    'Creative freelance Product Designer based in Sussex. Providing exemplary UX & UI design, Website Design + Development, e-Commerce, Digital Consulting Services.'
+    'Freelance Web Designer in Sussex specialising in UX & UI design, website development, e-commerce, and digital consulting. Creating user-friendly, high-performance websites to enhance your online presence.'
 }
 
 export default async function Home() {

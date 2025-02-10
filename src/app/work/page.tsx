@@ -122,7 +122,7 @@ function Clients() {
 export const metadata: Metadata = {
   title: 'Work',
   description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+    'We design intuitive UI and seamless UX to enhance user engagement, improve accessibility, and boost SEO rankings for better visibility and growth.',
 }
 
 export default async function Work() {
