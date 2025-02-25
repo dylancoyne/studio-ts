@@ -15,6 +15,7 @@ import { unifiedConditional } from 'unified-conditional'
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   images: {
+    minimumCacheTTL: 2592000, // Cache images for 30 days
     unoptimized: true, // Disable default image optimization
   },
 }
