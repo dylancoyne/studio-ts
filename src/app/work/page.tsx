@@ -127,7 +127,7 @@ export const metadata: Metadata = {
 
 export default async function Work() {
   // change (0, 1) to display number of case studies
-  let caseStudies = (await loadCaseStudies()).slice(0, 2)
+  let caseStudies = (await loadCaseStudies()).slice(0, 3)
 
   return (
     <>
