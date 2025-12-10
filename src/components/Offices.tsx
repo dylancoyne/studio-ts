@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import Obfuscate from 'react-obfuscate'
 
 function Office({
   name,
@@ -48,9 +49,9 @@ export function Offices({
         <br />
         trading as Ribbon Creative
         <br />
-        VAT number 284570577
+        <Obfuscate element="span">VAT number 284570577</Obfuscate>
         <br />
-        Company number 10214322
+        <Obfuscate element="span">Company number 10214322</Obfuscate>
         </Office>
       </li>
     </ul>
