@@ -1,7 +1,4 @@
-import clsx from 'clsx'
-
 'use client'
-
 import { useState, useEffect } from 'react'
 
 type AccordionpProps = {

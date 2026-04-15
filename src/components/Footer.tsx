@@ -32,7 +32,7 @@ const navigation = [
           //added div here to give last link primary colour
           <div className="text-primary transition hover:text-secondary">
             See all <span aria-hidden="true"> <svg className="w-3 h-3 ms-1 rtl:rotate-180  inline-block" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
             </svg></span>
 
            
@@ -94,7 +94,7 @@ function ContactSection() {
         </svg>
         <p className="mt-4 text-neutral-700 transition hover:text-secondary">
         <Obfuscate
-      email="hello@ribboncreative.co.uk"   
+      email="me@ribboncreative.co.uk"   
         />
         </p> 
       <div className="relative mt-8">
