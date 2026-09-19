@@ -3,32 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
-    "@formspree/react": "^2.5.1",
+    "@formspree/react": "^3.0.0",
     "@leafac/rehype-shiki": "^2.2.1",
     "@mdx-js/loader": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
-    "@next/mdx": "^14.0.4",
+    "@next/mdx": "^16.3.5",
     "@types/mdx": "^2.0.7",
     "@types/node": "^20.10.8",
-    "@types/react": "^18.2.47",
-    "@types/react-dom": "^18.2.18",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
     "acorn": "^8.10.0",
     "acorn-jsx": "^5.3.2",
     "autoprefixer": "^10.4.7",
     "clsx": "^2.1.0",
     "escape-string-regexp": "^5.0.0",
     "fast-glob": "^3.2.12",
-    "framer-motion": "^10.15.2",
-    "next": "^14.0.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "framer-motion": "^13.4.0",
+    "next": "^16.1.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
     "react-obfuscate": "^3.7.0",
     "recma-import-images": "0.0.3",
     "remark-gfm": "^4.0.0",
@@ -40,11 +40,15 @@
     "unified-conditional": "0.0.2"
   },
   "devDependencies": {
-    "eslint": "^8.56.0",
-    "eslint-config-next": "^14.0.4",
+    "eslint": "10.10.0",
+    "eslint-config-next": "16.3.5",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "sharp": "0.33.1",
     "ts-node": "^10.9.2"
+  },
+  "overrides": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0"
   }
 }

@@ -23,6 +23,11 @@ import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import { TagList, TagListItem } from '@/components/TagList'
 
 
+// @next-codemod-ignore Cache Components adoption: this segment temporarily allows blocking.
+// Remove this opt-out after verifying the segment passes validation without it.
+// See: https://nextjs.org/docs/app/guides/migrating-to-cache-components
+
+
 function CaseStudies({
   caseStudies,
 }: {
@@ -33,7 +38,7 @@ function CaseStudies({
       
       <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
         {caseStudies.map((caseStudy) => (
-          <FadeIn key={caseStudy.client}>
+          <FadeIn key={caseStudy.href}>
             <article>
               <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
                   <div className="col-span-full sm:col-span-full lg:col-span-1 w-full">
@@ -127,7 +132,7 @@ export const metadata: Metadata = {
 
 export default async function Work() {
   // change (0, 1) to display number of case studies
-  let caseStudies = (await loadCaseStudies()).slice(0, 3)
+  let caseStudies = (await loadCaseStudies()).slice(0, 4)
 
   return (
     <>
