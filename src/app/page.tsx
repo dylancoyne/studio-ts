@@ -35,6 +35,10 @@ import imageServices from '@/images/search-results.jpg'
 import imageHero from '@/images/showreel.gif'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
+// @next-codemod-ignore Cache Components adoption: this segment temporarily allows blocking.
+// Remove this opt-out after verifying the segment passes validation without it.
+// See: https://nextjs.org/docs/app/guides/migrating-to-cache-components
+
 const clients = [
   ['Vaa', logoVAALight],
   ['Sage', logoSage],
