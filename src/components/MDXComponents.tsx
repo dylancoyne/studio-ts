@@ -32,6 +32,21 @@ export const MDXComponents = {
       </div>
     )
   },
+
+  TwoColumn({
+    className,
+    ...props
+  }: React.ComponentPropsWithoutRef<'div'>) {
+    return (
+      <div
+        className={clsx(
+          'my-16 grid grid-cols-1 gap-8 sm:grid-cols-2 items-center !max-w-none',
+          className,
+        )}
+        {...props}
+      />
+    )
+  },
   
   StatList({
     className,

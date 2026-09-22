@@ -4,101 +4,72 @@ import imageJennyWilson from './jenny-wilson.jpg'
 
 export const caseStudy = {
   client: 'Nissan',
-  title: 'Transformation on the horizon, Nissan ARIYA defies ordinary',
+  title: 'Transformation on the horizon: reimagining the Nissan Ariya journey',
   description:
-     "Spearheaded the customer journey for Nissan's Ariya launch — from browsing and configuring to reserving online — as part of a global brand identity redesign.",
+    "Led the redesign of Nissan's Ariya configurator and the product-card entry points on the rebranded browse pages driving traffic into it, from first click through to a final action — Book a Test Drive, Contact, or Virtual Showroom.",
   summary: [
-    "Spearheaded the customer journey for Nissan's Ariya launch — from browsing and configuring to reserving online — as part of a global brand identity redesign."
+    "In 2020, Nissan paired the launch of its first all-electric SUV, the Ariya, with its first new logo in 20 years — a single moment meant to signal a shift toward advanced technology and seamless digital experience.",
+    "I owned the customer journey that had to carry that promise: from the reimagined browse page, through an updated configurator, to a clear final action — across markets with very different technical constraints and brand expectations.",
   ],
   logo,
   image: { src: imageHero },
   date: '2020-12',
   service: 'Experience Lead',
-  link: 'https://www.virginatlantic.com/case-studies/digital-unification',
   testimonial: {
-    author: { name: 'Benjamin Duffield', role: 'Lead Designer' },
+    author: { name: 'Dip Shah', role: 'Senior Manager, Global CX Optimization Lead, Nissan' },
     content:
-      'Dylan has played an instrumental role in the Virgin Atlantic (VA) digital transformation – spanning our browse and book journeys. His creative thinking has been the key to a streak of successful optimisations, with a knack for turning dials in the right direction.From initial discovery through to polished UI – Dylan’s years of experience are evident and always shine through. He’s always happy to lean into any challenge and is a superb collaborator. If he’s on your team, you’re already winning.',
+      "This particular project was all about improving the digital experience. We saw the increased frustration through Medallia DXA and wanted to really bring that down for our customers. It was great to see the impact of a better experience on our KPIs.",
   },
 }
 
 export const metadata = {
-  title: `${caseStudy.client} Case Study`,
+  title: caseStudy.title,
   description: caseStudy.description,
 }
 
-## Business challenge
+## Situation
 
-Ambitious project to improve the car selection and configurator journey globally with a consistent look and feel
+In July 2020, Nissan unveiled its first new logo in 20 years alongside the launch of the Ariya — the brand's first all-electric crossover SUV. It was billed as more than a product launch: a digital World Premiere blending the car reveal with the new identity, signalling Nissan's shift toward advanced technology and a genuinely seamless customer experience.
 
-In today's rather saturated, but extremely competitive, automobile industry, there is an increased focus on providing high level personalisation and customer satisfaction when buying a car, particularly as a car purchase is one which is not often, and is associated with luxury.
+The configurator sat right at the centre of that promise, and it wasn't ready. Some early work had already started in Australia — an A/B test for choosing your car and model, built by a UX designer who left the project in a hurry with barely any handover. It was performing reasonably well, but it was inconsistent, and user feedback made it clear people were struggling to find the information they actually wanted.
 
-Re-design the Nissan car configurator in order to enhance customer experience as part of their Global Brand Identity redesign
+Underneath that sat a harder problem: legacy back-end systems that made it genuinely difficult to keep anything consistent across markets, and a launch sequence — Japan and Europe first, the US market to follow — that meant the design had to hold together even while rolling out unevenly. And a redesigned configurator was only half the job: it also needed the right traffic reaching it in the first place, which meant rethinking how the newly rebranded product and brochure pages were driving people in.
 
-In July 2020, Nissan unveiled its first new logo in 20 years alongside the launch of the Nissan Ariya, the brand's first all-electric crossover SUV. The digital World Premiere showcased Nissan’s future vision, blending the car launch with the reveal of its new identity to highlight the brand’s shift towards advanced technology and seamless customer experiences. This pivotal moment laid the foundation for creating a Global Design System, connecting Nissan’s heritage with its digital-first future.
-## Strategy & Approach
+![Nissan Ariya configurator shown across desktop, tablet and mobile](./hero.jpg)
 
-**See Figma and PDF of user testing.**
+## Task
 
-Practices in the automotive industry are extremely diverse across the world, and Nissan is no exception. All solutions were designed to accommodate variations in business model, content, car culture and language across these diverse markets, while maintaining an optimum experience for all users.
+My brief started with the configurator itself: redesigning it end-to-end and resolving it into a clear final action — Book a Test Drive, Contact, or Virtual Showroom. From there, I worked back through the funnel, designing the Ariya product cards on Nissan's newly rebranded browse and brochure pages to drive more qualified clicks into that configurator. I wasn't responsible for the wider browse page redesign itself, or the brand relaunch and launch event — those sat with a separate global agency team. My remit was this specific journey, end to end, across US, Europe and Japan.
 
-Some work and been started in Australia as and A/B and was performing well to choose your car and model by a UX designer who left in a hurry with not much handover. There were design inconsistencies and user feedback proved it was difficult to find all the information users wanted to find.
+That meant reconciling wildly different constraints market to market: language, car culture, and business model vary enormously across the automotive industry, and Nissan was no exception. Every solution had to work for all of them, without diluting into a lowest-common-denominator experience.
 
-Legacy back end systems meant it was hard to update and have consistency across different countries
+It also meant managing people, not just pixels. I was leading a team of UX and UI designers spread across the EU, South America and Japan — different time zones bookended by Colombia on one side and Japan on the other. Partway through, our PM left the workload of organising timelines and user stories to me while we waited for a replacement; we then went through three different POs in three months. Keeping the team aligned meant getting seriously disciplined about feedback loops and preparation — there wasn't room for anything less.
+<TwoColumn>
+  <div>![Spain Ariya configurator, still live today](./jenny-wilson.jpg)</div>
+  <div>![Japan Ariya configurator, still live today](./jenny-wilson.jpg)</div>
+</TwoColumn>
 
-LTR country considerations for configurator
+Every design decision went through real user testing rather than assumption. Across two rounds of unmoderated remote testing (via Userbrain, 8 participants per round), we validated — and in some cases overturned — our own instincts. The clearest example: our first version of the "more information" overlay unexpectedly navigated users to a completely different page when they clicked through. Every single participant found this disorienting; several assumed the prototype was broken. We changed course, keeping the overlay in place on the same page instead — and in the next round of testing, it was the version every user preferred.
 
-Outlying countries such as Russia going rogue with their own version of a configurator
+The same rigour applied further down the funnel. When we tested two different approaches for showing additional colour options tied to a version change, 6 of the 8 participants preferred the version that explained *why* the change was happening, rather than just presenting it. That's the one we shipped.
 
-Japan forging ahead with Ariya MLR to be ahead of curve for electric vehicles so push to improve Car Configurator journey.olders
+Working alongside Dip Shah and Nissan's Global CX team, we also used behavioural analytics tooling to find exactly where customers were dropping off in production, not just in prototypes. That surfaced concrete, unglamorous problems: a pre-sales contact form with a confusing dropdown menu, a test-drive booking flow that made customers repeat the same choices twice, and a Configurator journey that lost people between the Vehicle Compare tool and the actual configuration step.
 
-Time zones
+## Result
 
-Different stakeholders with differing priorities and roadmaps
-
-Different agencies with differing priorities and roadmaps
-
-Launch Japan and Europe first US market to follow (US never happened) They do their own thing.
-
-
-PM useless left it to me to organise timelines user stories and priorities for PO whilst waiting for new one
-
-PO 3 in 3 months so. Managed a team of UX and UI designers in different parts of the world. (Different time zones) Columbia and Japan bookended the timeHad to get better at time management and being prepared with feedback loops. 
-
-Timeline of events
-
-Tricky stakeholders with big plans to move the company forward
-
-<Blockquote>
-It was decided to focus on only new car models for new look and feel as a priority. Other markets to follow Japan included.
-</Blockquote>
-
-
-
-
-## Results
-
-0.1% up from old flow in months prior and up 0.3% YOY on conversion. 
-
-We're measuring completion and conversion rates to assess overall effectiveness of the journey, while monitoring attachment rates for extras and transport options. We're also tracking the proportion of room upgrades to gauge upselling performance. 
-
-<StatList className="max-w-4xl">
-  <StatListItem value="+0.1%" label="Overall conversion" />
-  <StatListItem value="+0.3" label="YoY conversion" />
-  <StatListItem value="0.98%" label="Attachment rate" />
-
+<StatList>
+  <StatListItem value="32.5%" label="increase in pre-sales form completion after switching a dropdown to radio buttons" />
+  <StatListItem value="9.9%" label="increase in test-drive form completion on desktop (6.3% on mobile)" />
+  <StatListItem value="86%" label="improvement in Configurator Completion Rate after removing a duplicated decision step" />
+  <StatListItem value="39%" label="increase in pre-sale leads from a clearer Ariya Visualizer call to action" />
 </StatList>
 
-## Design evolution
+One participant's reaction to the redesigned configurator summed up what we'd been aiming for: *"very slick, very professional."* Not flashy — just a journey that finally got out of its own way.
 
-The iteration cycle was intense - Friday feedback had to be explored, resolved, and implemented by Tuesday. At the same time, with direct stakeholder access, we became the conduit for relaying evolving requirements to the team, collaborating closely with developers to ensure feasibility of designs.
+None of this happened on a stable team. Across the project I was leading UX and UI designers spread over three continents — EU, South America and Japan — through a stretch with no PM and three different POs in three months. Keeping the work on track meant becoming disciplined about feedback loops out of necessity: tight, well-prepared check-ins across time zones that didn't overlap, and a habit of documenting decisions clearly enough that continuity didn't depend on any one person being in the room. That structure is arguably as much a part of this project's result as the metrics above — the team delivered a global, multi-market redesign without ever having a stable leadership triangle behind it.
 
-Early on we identified a significant limitation to our designs, content. With hotel details, room upgrades, and transfer types returned as unformatted strings or cryptic codes. Recognising the impact on user experience and business outcomes, we took a proactive approach. We crafted designs that showcased how this information could be presented optimally, demonstrating the potential to boost attachment rates for room upgrades and ancillaries.
+The [Spain configurator](https://www.nissan.es/vehiculos/nuevos-vehiculos/ariya/version-explorer/configurar.html) built on this journey structure is still live today, several years on from launch — and [Japan's configurator](https://www3.nissan.co.jp/vehicles/new/ariya/version-explorer/configurator-v3.html) still runs on the same step-by-step structure we designed, grade through to estimate.
 
-Using this, our team developed a robust business case, quantifying the additional revenue these enhancements could generate. Through targeted workshops, we engaged with the content team, successfully conveying the importance of these updates. While immediate implementation wasn't feasible due to existing commitments, we secured a place in their 2025 roadmap.
-
-In response, we adopted a dual-track design approach: an MVP utilising current content constraints, and a 'fast follower' version showcasing our ideal, more digestible information display. This strategy allowed us to drive the design forward within present limitations while laying the groundwork for future enhancements.
-
-The new Virgin Holidays book flow emerged as a seamless extension of the Virgin Atlantic experience. It wasn't just a visual overhaul – we reimagined the entire journey, creating a unified platform that showcased holidays as a core Virgin Atlantic product.
-
-<p><a href="https://www.virginatlantic.com/" className="text-xl inline-flex items-center font-medium text-primary transition hover:text-secondary">View final solution<svg className="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg></a></p>
+<Blockquote author={caseStudy.testimonial.author}>
+  {caseStudy.testimonial.content}
+</Blockquote>
