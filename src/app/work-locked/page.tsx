@@ -3,7 +3,6 @@
 import { Suspense, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 
-import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Button } from '@/components/Button'
 
@@ -58,24 +57,22 @@ function PasswordForm() {
 
 export default function WorkLockedPage() {
   return (
-    <Container className="mt-24 sm:mt-32 lg:mt-40">
-      <FadeIn>
-        <div className="mx-auto max-w-3xl">
-          <p className="font-display text-base font-semibold text-neutral-950">
-            Private case study
-          </p>
-          <h1 className="mt-6 font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-6xl">
-            This project is password protected
-          </h1>
-          <p className="mt-6 text-xl text-neutral-600">
-            Enter the password to view this case study.
-          </p>
+    <FadeIn>
+      <div className="mx-auto mt-24 max-w-7xl px-6 text-left sm:mt-32 lg:mt-40 lg:max-w-3xl lg:px-8">
+        <p className="font-display text-base font-semibold text-neutral-950">
+          Private case study
+        </p>
+        <h1 className="mt-6 font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-6xl">
+          This project is password protected
+        </h1>
+        <p className="mt-6 text-xl text-neutral-600">
+          Enter the password to view this case study.
+        </p>
 
-          <Suspense fallback={null}>
-            <PasswordForm />
-          </Suspense>
-        </div>
-      </FadeIn>
-    </Container>
+        <Suspense fallback={null}>
+          <PasswordForm />
+        </Suspense>
+      </div>
+    </FadeIn>
   )
 }
