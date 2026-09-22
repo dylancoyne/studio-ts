@@ -1,12 +1,19 @@
 import Link from 'next/link'
-import React from 'react';
-import Obfuscate from 'react-obfuscate';
+import React from 'react'
+import Obfuscate from 'react-obfuscate'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
 import { socialMediaProfiles } from '@/components/SocialMedia'
 
-const navigation = [
+type FooterLink = { title: React.ReactNode; href: string }
+type SocialLink = {
+  title: string
+  href: string
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
+}
+
+const navigation: { title: string; links: FooterLink[] }[] = [
   {
     title: 'Me',
     links: [
@@ -16,26 +23,41 @@ const navigation = [
       { title: 'Contact', href: '/contact' },
     ],
   },
- 
   {
     title: 'Connect',
-    links: socialMediaProfiles,
+    links: (socialMediaProfiles as SocialLink[]).map((profile) => ({
+      title: profile.title,
+      href: profile.href,
+    })),
   },
   {
     title: 'Projects',
     links: [
       { title: 'Virgin Atlantic', href: '/work/virgin-atlantic' },
       { title: 'Sage', href: '/work/sage' },
-      // { title: 'Nissan', href: '/work/nissan' },
+      { title: 'Nissan', href: '/work/nissan' },
       {
         title: (
-          //added div here to give last link primary colour
           <div className="text-primary transition hover:text-secondary">
-            See all <span aria-hidden="true"> <svg className="w-3 h-3 ms-1 rtl:rotate-180  inline-block" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg></span>
-
-           
+            See all{' '}
+            <span aria-hidden="true">
+              {' '}
+              <svg
+                className="ms-1 inline-block h-3 w-3 rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </span>
           </div>
         ),
         href: '/work',
@@ -88,28 +110,37 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 function ContactSection() {
   return (
     <div className="max-w-sm">
-       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" strokeWidth={1} stroke="white" className="size-5">
-          <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
-          <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
-        </svg>
-        <p className="mt-4 text-neutral-700 transition hover:text-secondary">
-        <Obfuscate
-      email="me@ribboncreative.co.uk"   
-        />
-        </p> 
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        strokeWidth={1}
+        stroke="white"
+        className="size-5"
+      >
+        <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+        <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+      </svg>
+      <p className="mt-4 text-neutral-700 transition hover:text-secondary">
+        <Obfuscate email="me@ribboncreative.co.uk" />
+      </p>
       <div className="relative mt-8">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="size-5"
+        >
           <path d="M10.5 18.75a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" />
           <path d="M8.625.75A3.375 3.375 0 0 0 5.25 4.125v15.75a3.375 3.375 0 0 0 3.375 3.375h6.75a3.375 3.375 0 0 0 3.375-3.375V4.125A3.375 3.375 0 0 0 15.375.75h-6.75ZM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 0 1 7.5 19.875V4.125Z" />
         </svg>
-      <p className="mt-4 text-sm text-neutral-700 transition hover:text-secondary" >
-     <Obfuscate tel="+44 (0)7920133043"/>
-      </p>
+        <p className="mt-4 text-sm text-neutral-700 transition hover:text-secondary">
+          <Obfuscate tel="+44 (0)7920133043" />
+        </p>
       </div>
     </div>
   )
 }
-
 
 export function Footer() {
   return (

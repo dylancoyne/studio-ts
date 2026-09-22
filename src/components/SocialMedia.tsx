@@ -39,7 +39,7 @@ function StravaIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export const socialMediaProfiles = [
   { title: 'Linkedin', href: 'https://www.linkedin.com/in/dylancoyne/', icon: LinkedinIcon },
-  { title: 'Github', href: 'https://github.com/dylancoyne', icon: GithubIcon },,
+  { title: 'Github', href: 'https://github.com/dylancoyne', icon: GithubIcon },
   { title: 'Strava', href: 'https://www.strava.com/athletes/3766939', icon: StravaIcon },
 ]
 

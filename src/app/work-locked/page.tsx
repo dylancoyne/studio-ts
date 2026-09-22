@@ -5,7 +5,6 @@ import { useRouter, useSearchParams } from 'next/navigation'
 
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
 
 function PasswordForm() {
@@ -40,7 +39,7 @@ function PasswordForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-4">
+    <form onSubmit={handleSubmit} className="mt-10 flex max-w-sm flex-col gap-4">
       <input
         type="password"
         value={password}
@@ -61,17 +60,21 @@ export default function WorkLockedPage() {
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <FadeIn>
-        <Border position="left" className="mx-auto max-w-xl pl-8">
-          <h1 className="font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
-            This case study is private
-          </h1>
-          <p className="mt-4 text-base text-neutral-600">
-            Enter the password to view this project.
+        <div className="mx-auto max-w-3xl">
+          <p className="font-display text-base font-semibold text-neutral-950">
+            Private case study
           </p>
+          <h1 className="mt-6 font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-6xl">
+            This project is password protected
+          </h1>
+          <p className="mt-6 text-xl text-neutral-600">
+            Enter the password to view this case study.
+          </p>
+
           <Suspense fallback={null}>
             <PasswordForm />
           </Suspense>
-        </Border>
+        </div>
       </FadeIn>
     </Container>
   )
